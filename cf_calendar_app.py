@@ -11,4 +11,4 @@ if __name__ == "__main__":
     }
 
     perfectGymBot = bot.PerfectGymBot()
-    perfectGymBot.client_login().select_class(classDetails)
+    perfectGymBot.client_login()._get_classess_id(classDetails)
