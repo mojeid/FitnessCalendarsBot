@@ -1,6 +1,7 @@
 # Module responsible for sending the requests to the page #
 
 import requests
+import credentials
 
 
 class PerfectGymBot:
@@ -8,7 +9,7 @@ class PerfectGymBot:
 
     def client_login(self):
         self._session.get('https://crossfit.perfectgym.pl/ClientPortal2/')
-        payload = {'Login': 'mujeid@gmail.com', 'Password': 'Rsft789p'}
+        payload = {'Login': credentials.username, 'Password': credentials.password}
         self._session.post("https://crossfit.perfectgym.pl/ClientPortal2/Auth/Login", data=payload)
         return self
 
