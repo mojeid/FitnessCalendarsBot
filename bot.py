@@ -23,8 +23,8 @@ class PerfectGymBot:
 
         class_id = self._get_class_id(class_details)
 
-        if not class_id:
-            print('There are no such classes as specified. Please provide correct class details.')
+        if not class_id or not self._is_class_bookable(class_id):
+            print('Wrong class information or class is not bookable. Please check your classes details.')
             return
 
         booking_payload = {'classId': class_id}
