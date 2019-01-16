@@ -36,6 +36,23 @@ class PerfectGymBot:
         else:
             print('There was an error while booking. Classes were not booked')
 
+    def cancel_booking(self, class_details):
+        """ Cancels user's reservation for classes for classes specfied by date/time and trainer.
+
+        If user have no reservation, appropriate message will be shown to user. """
+        if not self._is_user_logged_in():
+            self.client_login()
+
+        class_id = self._get_class_id(class_details)
+
+        if not class_id:
+            print('There are no such classes as specified. Please provide correct class details.')
+            return
+
+        cancel_payload = {'classId': class_id}
+        self._session.post('https://crossfit.perfectgym.pl/ClientPortal2/Classes/ClassCalendar/CancelBooking',
+                           cancel_payload)
+
     def _get_class_id(self, class_details):
         """Parses information about classes available and returns ID of classess matching class details param """
         club_payload = {"clubId": self._get_club_id(class_details)}
