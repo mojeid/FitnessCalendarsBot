@@ -4,11 +4,14 @@ if __name__ == "__main__":
     # execute only if run as a script
 
     classDetails = {
-        "startTime": "07:00",
-        "date": "2019-01-16",
-        "trainer": "Kamil Klich",
-        "title": 'CrossFit'
+        "clubName": "CF Kraków",
+        "startTime": "08:00",
+        "date": "2019-01-18",
+        "trainer": "Filip Jopek",
+        "title": 'WOD'
     }
 
     perfectGymBot = bot.PerfectGymBot()
-    perfectGymBot.client_login()._get_classess_id(classDetails)
+    class_id = perfectGymBot.client_login().book_class(classDetails)
+
+
