@@ -60,7 +60,7 @@ class PerfectGymBot:
                                data=club_payload)
         classes_response_data = r.json()
 
-        return json_parser.get_class_id(classes_response_data, class_details)
+        return json_parser.get_class_id_from_perfectgym_classess_list(classes_response_data, class_details)
 
     def _is_user_logged_in(self):
         response = self._session.get(

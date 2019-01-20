@@ -1,7 +1,7 @@
 """ Module responsible data from custom PerfectGym app HTTP responses. """
 
 
-def get_class_id(json_response, class_details):
+def get_class_id_from_perfectgym_classess_list(json_response, class_details):
     """ Parses JSON data and returns Class ID for specific class date/time and trainer."""
     class_id = None
     classes_per_hour = ((json_response['CalendarData'])[0])['ClassesPerHour']
