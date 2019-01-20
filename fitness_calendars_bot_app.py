@@ -14,4 +14,7 @@ if __name__ == "__main__":
     perfectGymBot = bot.PerfectGymBot()
     class_id = perfectGymBot.client_login().book_class(classDetails)
 
+    import session_builder
+    session_builder.SessionBuilder.create().with_proxy().build()
+
 

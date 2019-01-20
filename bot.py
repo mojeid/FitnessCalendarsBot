@@ -5,8 +5,15 @@ import credentials
 import json_parser
 
 
-class PerfectGymBot:
+class Bot:
+    """
+    Represents basic Bot functionality, common for all fitness apps&pages bots.
+    """
     _session = requests.session()
+
+
+class PerfectGymBot(Bot):
+    """ Bot designed to work with PerfectGym system used by Platinium, CF Krakow and others"""
 
     def client_login(self):
         self._session.get('https://crossfit.perfectgym.pl/ClientPortal2/')
