@@ -10,6 +10,11 @@ class Bot:
     Represents basic Bot functionality, common for all fitness apps&pages bots.
     """
     _session = requests.session()
+    _config = None
+
+    def __init__(self, session, config):
+        self._session = session
+        self._config = config
 
 
 class PerfectGymBot(Bot):

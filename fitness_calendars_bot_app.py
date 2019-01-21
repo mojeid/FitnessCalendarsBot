@@ -1,4 +1,6 @@
 import bot
+import session_builder
+import config
 
 if __name__ == "__main__":
     # execute only if run as a script
@@ -6,15 +8,9 @@ if __name__ == "__main__":
     classDetails = {
         "clubName": "CF Kraków",
         "startTime": "08:00",
-        "date": "2019-01-18",
-        "trainer": "Filip Jopek",
-        "title": 'WOD'
+        "date": "2019-01-23",
+        "trainer": "Michał Kubicz",
+        "title": 'WOD Beginners'
     }
 
-    perfectGymBot = bot.PerfectGymBot()
-    class_id = perfectGymBot.client_login().book_class(classDetails)
-
-    import session_builder
-    session_builder.SessionBuilder.create().with_proxy().build()
-
-
+    perfectGymBot = bot.PerfectGymBot(session=session_builder.Session.build(), config=config.CFKrakowConfig)
