@@ -7,6 +7,6 @@ class PlatiniumGymConfig(Config):
     CLASS_DETAILS_REQUEST_METHOD = 'GET'
 
 
-class CFKrakowConfig(Config):
+class CrossfitConfig(Config):
     BASE_URL = 'https://crossfit.perfectgym.pl/ClientPortal2'
     CLASS_DETAILS_REQUEST_METHOD = 'POST'

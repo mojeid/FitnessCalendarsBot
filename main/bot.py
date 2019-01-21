@@ -1,8 +1,7 @@
 # Module responsible for sending the requests to the page #
 
 import requests
-import credentials
-import json_parser
+from main import json_parser, credentials
 
 
 class Bot:
