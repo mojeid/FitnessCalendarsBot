@@ -1,0 +1,1969 @@
+{
+  "CalendarData": [
+    {
+      "ZoneName": "LEA",
+      "ClassesPerHour": [
+        {
+          "Hour": "1900-01-01T06:00:00",
+          "ClassesPerDay": [
+            [
+              {
+                "Id": 57061,
+                "Status": "Unavailable",
+                "StatusReason": null,
+                "Name": "OPEN GYM",
+                "StartTime": "2019-01-22T06:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": null,
+                "Trainer": "",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 101628,
+                "Status": "Unavailable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners/CrossFit",
+                "StartTime": "2019-01-22T06:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 3,
+                  "Limit": 18,
+                  "Available": 9
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 71496,
+                "Status": "BookingNotRequired",
+                "StatusReason": null,
+                "Name": "OPEN GYM",
+                "StartTime": "2019-01-23T06:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": null,
+                "Trainer": "",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 63165,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit",
+                "StartTime": "2019-01-23T06:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 11
+                },
+                "Trainer": "Kamil Klich",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 71932,
+                "Status": "BookingNotRequired",
+                "StatusReason": null,
+                "Name": "OPEN GYM",
+                "StartTime": "2019-01-24T06:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": null,
+                "Trainer": "",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 68880,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners/CrossFit",
+                "StartTime": "2019-01-24T06:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 15
+                },
+                "Trainer": "Paweł Wojciechowski",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 97084,
+                "Status": "BookingNotRequired",
+                "StatusReason": null,
+                "Name": "OPEN GYM",
+                "StartTime": "2019-01-25T06:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": null,
+                "Trainer": "",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 77600,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit",
+                "StartTime": "2019-01-25T06:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 15
+                },
+                "Trainer": "Magda Rutkowska",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [],
+            [],
+            [
+              {
+                "Id": 54010,
+                "Status": "BookingNotRequired",
+                "StatusReason": null,
+                "Name": "OPEN GYM",
+                "StartTime": "2019-01-28T06:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": null,
+                "Trainer": "",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 14644,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit",
+                "StartTime": "2019-01-28T06:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 15
+                },
+                "Trainer": "Kamil Klich",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ]
+          ]
+        },
+        {
+          "Hour": "1900-01-01T07:00:00",
+          "ClassesPerDay": [
+            [
+              {
+                "Id": 54881,
+                "Status": "Unavailable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-22T07:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 12
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 63601,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-23T07:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 14
+                },
+                "Trainer": "Kamil Klich",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 69316,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-24T07:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 15
+                },
+                "Trainer": "Paweł Wojciechowski",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 78036,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-25T07:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 16
+                },
+                "Trainer": "Magda Rutkowska",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [],
+            [],
+            [
+              {
+                "Id": 15127,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-28T07:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Kamil Klich",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ]
+          ]
+        },
+        {
+          "Hour": "1900-01-01T08:00:00",
+          "ClassesPerDay": [
+            [],
+            [
+              {
+                "Id": 64037,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Endurance/Condition",
+                "StartTime": "2019-01-23T08:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 16,
+                  "Available": 15
+                },
+                "Trainer": "Kamil Klich",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "Hour": "1900-01-01T09:00:00",
+          "ClassesPerDay": [
+            [
+              {
+                "Id": 128989,
+                "Status": "Unavailable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-22T09:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 13
+                },
+                "Trainer": "Justyna Ruta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [],
+            [
+              {
+                "Id": 129423,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-24T09:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 16
+                },
+                "Trainer": "Justyna Ruta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 128555,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-25T09:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 16
+                },
+                "Trainer": "Wiktor Stopyra",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 97954,
+                "Status": "BookingNotRequired",
+                "StatusReason": null,
+                "Name": "OPEN GYM",
+                "StartTime": "2019-01-26T09:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 100,
+                  "Available": 100
+                },
+                "Trainer": "",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 100057,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Cross Kids 5-8 lat",
+                "StartTime": "2019-01-26T09:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 16,
+                  "Available": 16
+                },
+                "Trainer": "Halina Matejko",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 85872,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-26T09:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Justyna Ruta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 98389,
+                "Status": "BookingNotRequired",
+                "StatusReason": null,
+                "Name": "OPEN GYM",
+                "StartTime": "2019-01-27T09:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 100,
+                  "Available": 100
+                },
+                "Trainer": "",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 132124,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-27T09:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 17
+                },
+                "Trainer": "Wiktor Stopyra",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 128122,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-28T09:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 17
+                },
+                "Trainer": "Wiktor Stopyra",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ]
+          ]
+        },
+        {
+          "Hour": "1900-01-01T10:00:00",
+          "ClassesPerDay": [
+            [],
+            [],
+            [],
+            [],
+            [
+              {
+                "Id": 100491,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Cross Kids 9-12 lat",
+                "StartTime": "2019-01-26T10:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 16,
+                  "Available": 16
+                },
+                "Trainer": "Halina Matejko",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 86307,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-26T10:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Justyna Ruta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 89352,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-27T10:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 17
+                },
+                "Trainer": "Wiktor Stopyra",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            []
+          ]
+        },
+        {
+          "Hour": "1900-01-01T11:00:00",
+          "ClassesPerDay": [
+            [],
+            [],
+            [],
+            [],
+            [
+              {
+                "Id": 86742,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-26T11:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 17
+                },
+                "Trainer": "Oliwia Kowalska",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 89787,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit PLUS",
+                "StartTime": "2019-01-27T11:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 16,
+                  "Available": 16
+                },
+                "Trainer": "Justyna Ruta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            []
+          ]
+        },
+        {
+          "Hour": "1900-01-01T12:00:00",
+          "ClassesPerDay": [
+            [
+              {
+                "Id": 127252,
+                "Status": "Unavailable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-22T12:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 12
+                },
+                "Trainer": "Magda Rutkowska",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 105974,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-23T12:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 16
+                },
+                "Trainer": "Michał Rogoziński",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 127687,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-24T12:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 17
+                },
+                "Trainer": "Magda Rutkowska",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 106843,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-25T12:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 14
+                },
+                "Trainer": "Michał Rogoziński",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 87177,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-26T12:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Oliwia Kowalska",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 90222,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-27T12:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Justyna Ruta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 106409,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-28T12:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Michał Rogoziński",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ]
+          ]
+        },
+        {
+          "Hour": "1900-01-01T16:00:00",
+          "ClassesPerDay": [
+            [
+              {
+                "Id": 57497,
+                "Status": "Unavailable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-22T16:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 2,
+                  "Limit": 18,
+                  "Available": 5
+                },
+                "Trainer": "Filip Jopek",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 64473,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-23T16:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 16
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 72368,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-24T16:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 13
+                },
+                "Trainer": "Magda Rutkowska",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 96163,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit",
+                "StartTime": "2019-01-24T16:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 80213,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-25T16:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 17
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 81953,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit",
+                "StartTime": "2019-01-25T16:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 17
+                },
+                "Trainer": "Filip Jopek",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 88047,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Endurance/Condition",
+                "StartTime": "2019-01-26T16:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 16,
+                  "Available": 14
+                },
+                "Trainer": "Filip Jopek",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 90657,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-27T16:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 17
+                },
+                "Trainer": "Oliwia Kowalska",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 49649,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-28T16:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 17
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 52265,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit",
+                "StartTime": "2019-01-28T16:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Magda Rutkowska",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ]
+          ]
+        },
+        {
+          "Hour": "1900-01-01T17:00:00",
+          "ClassesPerDay": [
+            [
+              {
+                "Id": 57933,
+                "Status": "Unavailable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-22T17:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 0,
+                  "Limit": 18,
+                  "Available": 0
+                },
+                "Trainer": "Filip Jopek",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 60985,
+                "Status": "Unavailable",
+                "StatusReason": null,
+                "Name": "Functional Body Building (upper body)",
+                "StartTime": "2019-01-22T17:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 1,
+                  "Limit": 18,
+                  "Available": 2
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 64909,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-23T17:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 14
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 99398,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Trening Siłowy dla Kobiet",
+                "StartTime": "2019-01-23T17:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 3,
+                  "Limit": 18,
+                  "Available": 10
+                },
+                "Trainer": "Magda Rutkowska",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 72804,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-24T17:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 15
+                },
+                "Trainer": "Magda Rutkowska",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 75856,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Functional Bodybuilding (lower body)",
+                "StartTime": "2019-01-24T17:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 3,
+                  "Limit": 18,
+                  "Available": 10
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 80648,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-25T17:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 82388,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-25T17:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 14
+                },
+                "Trainer": "Filip Jopek",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 88482,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-26T17:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Filip Jopek",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 91092,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CORE",
+                "StartTime": "2019-01-27T17:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 16,
+                  "Available": 14
+                },
+                "Trainer": "Oliwia Kowalska",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 50085,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Functional Bodybuilding (lower body)",
+                "StartTime": "2019-01-28T17:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 52701,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Trening Siłowy dla Kobiet",
+                "StartTime": "2019-01-28T17:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 17
+                },
+                "Trainer": "Magda Rutkowska",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ]
+          ]
+        },
+        {
+          "Hour": "1900-01-01T18:00:00",
+          "ClassesPerDay": [
+            [
+              {
+                "Id": 116896,
+                "Status": "Unavailable",
+                "StatusReason": null,
+                "Name": "CrossFit Team Workout (all levels)",
+                "StartTime": "2019-01-22T18:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 2,
+                  "Limit": 18,
+                  "Available": 7
+                },
+                "Trainer": "Bartosz Gruca",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 118200,
+                "Status": "Unavailable",
+                "StatusReason": null,
+                "Name": "Olympic Beginners",
+                "StartTime": "2019-01-22T18:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 2,
+                  "Limit": 12,
+                  "Available": 4
+                },
+                "Trainer": "Krzysztof Sułkowski",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 117766,
+                "Status": "Unavailable",
+                "StatusReason": null,
+                "Name": "Endurance/Condition",
+                "StartTime": "2019-01-22T18:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 3,
+                  "Limit": 16,
+                  "Available": 9
+                },
+                "Trainer": "Filip Jopek",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 134980,
+                "Status": "Unavailable",
+                "StatusReason": null,
+                "Name": "CrossFit Gymnastics",
+                "StartTime": "2019-01-22T18:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 15
+                },
+                "Trainer": "Michał Kubicz",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 61421,
+                "Status": "Unavailable",
+                "StatusReason": null,
+                "Name": "CORE",
+                "StartTime": "2019-01-22T18:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 3,
+                  "Limit": 18,
+                  "Available": 9
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 65345,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit",
+                "StartTime": "2019-01-23T18:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 15
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 119075,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Kettlebells Beginners",
+                "StartTime": "2019-01-23T18:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 16,
+                  "Available": 12
+                },
+                "Trainer": "Magda Rutkowska",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 67091,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-23T18:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 11
+                },
+                "Trainer": "Bartosz Gruca",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 120815,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Olympic Beginners",
+                "StartTime": "2019-01-24T18:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 12,
+                  "Available": 11
+                },
+                "Trainer": "Krzysztof Sułkowski",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 73240,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-24T18:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 14
+                },
+                "Trainer": "Paweł Wojciechowski",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 121248,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CORE",
+                "StartTime": "2019-01-24T18:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 16,
+                  "Available": 11
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 134865,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Gymnastics",
+                "StartTime": "2019-01-24T18:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 16
+                },
+                "Trainer": "Wiktor Stopyra",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 81083,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Functional Body Building (upper body)",
+                "StartTime": "2019-01-25T18:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 2,
+                  "Limit": 18,
+                  "Available": 4
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 122547,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Olympic Weigthlifting",
+                "StartTime": "2019-01-25T18:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 12,
+                  "Available": 10
+                },
+                "Trainer": "Julita Król",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 88917,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-26T18:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 17
+                },
+                "Trainer": "Filip Jopek",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 91527,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit PLUS",
+                "StartTime": "2019-01-27T18:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Oliwia Kowalska",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 50521,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-28T18:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 16
+                },
+                "Trainer": "Bartosz Gruca",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 115162,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Kettlebells Beginners",
+                "StartTime": "2019-01-28T18:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 16,
+                  "Available": 15
+                },
+                "Trainer": "Magda Rutkowska",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 53137,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-28T18:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Michał Rogoziński",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ]
+          ]
+        },
+        {
+          "Hour": "1900-01-01T19:00:00",
+          "ClassesPerDay": [
+            [
+              {
+                "Id": 118634,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Olympic Weigthlifting",
+                "StartTime": "2019-01-22T19:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 12,
+                  "Available": 8
+                },
+                "Trainer": "Krzysztof Sułkowski",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 58805,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit",
+                "StartTime": "2019-01-22T19:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 12
+                },
+                "Trainer": "Paweł Wojciechowski",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 135143,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Grupa zamknięta",
+                "StartTime": "2019-01-22T19:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 12,
+                  "Available": 11
+                },
+                "Trainer": "Bartosz Gruca",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 61857,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-22T19:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 11
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 65781,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-23T19:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 17
+                },
+                "Trainer": "Michał Rogoziński",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 135089,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Mobility",
+                "StartTime": "2019-01-23T19:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 3,
+                  "Limit": 16,
+                  "Available": 7
+                },
+                "Trainer": "Magda Rutkowska",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 67572,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-23T19:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 13
+                },
+                "Trainer": "Bartosz Gruca",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 120380,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Endurance/Condition",
+                "StartTime": "2019-01-23T19:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 16,
+                  "Available": 12
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 124304,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Olympic Weightlifting 2",
+                "StartTime": "2019-01-24T19:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 15,
+                  "Available": 13
+                },
+                "Trainer": "Krzysztof Sułkowski",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 74112,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit",
+                "StartTime": "2019-01-24T19:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 14
+                },
+                "Trainer": "Paweł Wojciechowski",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 76728,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-24T19:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 12
+                },
+                "Trainer": "Michał Rogoziński",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 102933,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit",
+                "StartTime": "2019-01-25T19:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 17
+                },
+                "Trainer": "Bartosz Gruca",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 83258,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-25T19:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 16
+                },
+                "Trainer": "Julita Król",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [],
+            [],
+            [
+              {
+                "Id": 50957,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit",
+                "StartTime": "2019-01-28T19:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Bartosz Gruca",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 115596,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Endurance/Condition",
+                "StartTime": "2019-01-28T19:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 16,
+                  "Available": 15
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 53573,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-28T19:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Krzysztof Sułkowski",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ]
+          ]
+        },
+        {
+          "Hour": "1900-01-01T20:00:00",
+          "ClassesPerDay": [
+            [
+              {
+                "Id": 59677,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-22T20:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 2,
+                  "Limit": 18,
+                  "Available": 4
+                },
+                "Trainer": "Michał Rogoziński",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 62293,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-22T20:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 13
+                },
+                "Trainer": "Paweł Wojciechowski",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 102065,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-23T20:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 15
+                },
+                "Trainer": "Michał Rogoziński",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 119946,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Kettlebells Beginners",
+                "StartTime": "2019-01-23T20:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 16,
+                  "Available": 12
+                },
+                "Trainer": "Bartosz Gruca",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 134341,
+                "Status": "FullBooked",
+                "StatusReason": null,
+                "Name": "Zajęcia biegowe",
+                "StartTime": "2019-01-23T20:30:57",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 0,
+                  "Limit": 20,
+                  "Available": 0
+                },
+                "Trainer": "Kamil Klich",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 135196,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Grupa zamknięta",
+                "StartTime": "2019-01-24T20:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 12,
+                  "Available": 12
+                },
+                "Trainer": "Bartosz Gruca",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 74548,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-24T20:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 15
+                },
+                "Trainer": "Paweł Wojciechowski",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 77164,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-24T20:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 15
+                },
+                "Trainer": "Michał Rogoziński",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [
+              {
+                "Id": 131483,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-25T20:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 15
+                },
+                "Trainer": "Bartosz Gruca",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [],
+            [],
+            [
+              {
+                "Id": 51393,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-28T20:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Szymon Mikuta",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 129941,
+                "Status": "FullBooked",
+                "StatusReason": null,
+                "Name": "Zajęcia biegowe",
+                "StartTime": "2019-01-28T20:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 0,
+                  "Limit": 10,
+                  "Available": 0
+                },
+                "Trainer": "Kamil Klich",
+                "Users": [],
+                "HasRelatives": false
+              },
+              {
+                "Id": 116030,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Olympic Weigthlifting",
+                "StartTime": "2019-01-28T20:30:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 12,
+                  "Available": 12
+                },
+                "Trainer": "Krzysztof Sułkowski",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ]
+          ]
+        },
+        {
+          "Hour": "1900-01-01T21:00:00",
+          "ClassesPerDay": [
+            [
+              {
+                "Id": 123846,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-22T21:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 18,
+                  "Available": 12
+                },
+                "Trainer": "Michał Rogoziński",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [],
+            [
+              {
+                "Id": 74984,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Team Workout (all levels)",
+                "StartTime": "2019-01-24T21:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Bartosz Gruca",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ],
+            [],
+            [],
+            [],
+            [
+              {
+                "Id": 51829,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "CrossFit Beginners",
+                "StartTime": "2019-01-28T21:00:00",
+                "Duration": "PT1H",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 18,
+                  "Available": 18
+                },
+                "Trainer": "Michał Rogoziński",
+                "Users": [],
+                "HasRelatives": false
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "PagerData": {
+    "Days": [
+      "2019-01-22T00:00:00",
+      "2019-01-23T00:00:00",
+      "2019-01-24T00:00:00",
+      "2019-01-25T00:00:00",
+      "2019-01-26T00:00:00",
+      "2019-01-27T00:00:00",
+      "2019-01-28T00:00:00"
+    ],
+    "NextDate": "2019-01-29T00:00:00",
+    "PreviousDate": "2019-01-15T00:00:00",
+    "Date": "2019-01-22T00:00:00",
+    "CanGoForward": true,
+    "CanGoBack": false,
+    "StartDate": "2019-01-22T00:00:00",
+    "EndDate": "2019-01-28T23:59:59.999"
+  }
+}
