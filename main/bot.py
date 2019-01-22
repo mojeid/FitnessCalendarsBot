@@ -1,6 +1,7 @@
 # Module responsible for sending the requests to the page #
 
 import requests
+import logging
 from main import json_parser, credentials
 
 
@@ -10,16 +11,23 @@ class Bot:
     """
     _session = requests.session()
     _config = None
+    _logger = logging.getLogger("Bot")
 
     def __init__(self, session, config):
         self._session = session
         self._config = config
+        logging.basicConfig(level=logging.INFO)
 
 
 class PerfectGymBot(Bot):
     """ Bot designed to work with PerfectGym system used by Platinium, CF Krakow and others"""
 
     def client_login(self):
+        """
+        Performs login to the application using credentials from credentials.py file not stored in VCS
+
+        :rtype: PerfectGymBot
+        """
         self._session.get('https://crossfit.perfectgym.pl/ClientPortal2/')
         payload = {'Login': credentials.username, 'Password': credentials.password}
         self._session.post("https://crossfit.perfectgym.pl/ClientPortal2/Auth/Login", data=payload)
@@ -31,21 +39,26 @@ class PerfectGymBot(Bot):
         User login is verified inside the method already. """
         if not self._is_user_logged_in():
             self.client_login()
+            if not self._is_user_logged_in():
+                self._logger.warning(
+                    'Login was not successful 2 times in a row. Please check your account credentials.')
 
         class_id = self._get_class_id(class_details)
 
         if not class_id or not self._is_class_bookable(class_id):
-            print('Wrong class information or class is not bookable. Please check your classes details.')
-            return
+            self._logger.warning('Wrong class information or class is not bookable. Please check your classes details.')
+            return self
 
         booking_payload = {'classId': class_id}
         response = self._session.post('https://crossfit.perfectgym.pl/ClientPortal2/Classes/ClassCalendar/BookClass',
                                       booking_payload)
 
         if response.status_code == 200:
-            print('Class were properly booked!')
+            self._logger.info('Class were properly booked!')
         else:
-            print('There was an error while booking. Classes were not booked')
+            self._logger.info('There was an error while booking. Classes were not booked')
+
+        return self
 
     def cancel_booking(self, class_details):
         """ Cancels user's reservation for classes for classes specfied by date/time and trainer.
@@ -57,12 +70,19 @@ class PerfectGymBot(Bot):
         class_id = self._get_class_id(class_details)
 
         if not class_id:
-            print('There are no such classes as specified. Please provide correct class details.')
-            return
+            self._logger.warning('There are no such classes as specified. Please provide correct class details.')
+            return self
 
         cancel_payload = {'classId': class_id}
-        self._session.post('https://crossfit.perfectgym.pl/ClientPortal2/Classes/ClassCalendar/CancelBooking',
-                           cancel_payload)
+        response = self._session.post(
+            'https://crossfit.perfectgym.pl/ClientPortal2/Classes/ClassCalendar/CancelBooking',
+            cancel_payload)
+
+        if response.status_code == 200:
+            self._logger.info('Classes were successfully cancelled!')
+        else:
+            self._logger.warning('Could not cancel your booking!')
+        return self
 
     def _get_class_id(self, class_details):
         """Parses information about classes available and returns ID of classess matching class details param """
@@ -94,5 +114,5 @@ class PerfectGymBot(Bot):
         if 'Kraków' in class_details['clubName'] or 'Krakow' in class_details['clubName']:
             return 3
 
-        print('There is no club with such name. Please provide correct club name')
+            self._logger.warning('There is no club with such name. Please provide correct club name')
         return
