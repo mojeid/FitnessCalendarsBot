@@ -5,6 +5,7 @@ The main idea is to use the app when fitness classess are booked, to refresh it 
 
 # Built with
 + [requests](http://docs.python-requests.org/en/master/) - "the only Non-GMO HTTP library for Python, safe for human consumption."
++ [JMESPath](https://jmespath.readthedocs.io) - JSON Matching Expression paths.
 
 # Author
 + Jakub Sowicki
