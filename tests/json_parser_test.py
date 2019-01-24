@@ -1,5 +1,7 @@
 import unittest
 import json
+
+
 from main import json_parser
 
 
@@ -20,3 +22,10 @@ class JsonParserTestCase(unittest.TestCase):
 
         print(json_test_data)
         self.assertEqual(89352, json_parser.get_class_id_from_perfectgym_classess_list(json_test_data, classDetails))
+
+    def test_supported_networks_list(self):
+        SUPPORTED_NETWORKS_COUNT = 2
+        self.assertEqual(SUPPORTED_NETWORKS_COUNT, len(json_parser.get_supported_fitness_networks()))
+
+    def test_get_list_of_clubs(self):
+        self.assertEqual(11, len(json_parser.get_list_of_clubs("Platinium")))
