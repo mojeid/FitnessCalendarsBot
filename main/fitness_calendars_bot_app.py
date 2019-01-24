@@ -12,4 +12,4 @@ if __name__ == "__main__":
     }
 
     perfectGymBot = bot.PerfectGymBot(session=session_builder.Session.build(), config=config.CrossfitConfig)
-    perfectGymBot.book_class()
+    perfectGymBot.cancel_booking(classDetails)

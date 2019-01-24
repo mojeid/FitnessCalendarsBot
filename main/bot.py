@@ -2,7 +2,8 @@
 
 import requests
 import logging
-from main import json_parser, credentials
+from main import json_parser
+from main.resources import credentials
 
 
 class Bot:

@@ -1,0 +1,58 @@
+{
+  "platinium": [
+    {
+      "name": "Platinium Al. Pokoju 16",
+      "id": 16
+    },
+    {
+      "name": "Platinium Aleksandry",
+      "id": 4
+    },
+    {
+      "name": "Platinium Bratysławska",
+      "id": 15
+    },
+    {
+      "name": "Platinium Bronowice",
+      "id": 12
+    },
+    {
+      "name": "Platinium Buma Square",
+      "id": 6
+    },
+    {
+      "name": "Platinium Lea",
+      "id": 1
+    },
+    {
+      "name": "Platinium Mogilska",
+      "id": 2
+    },
+    {
+      "name": "Platinium Plaza",
+      "id": 11
+    },
+    {
+      "name": "Platinium Skawina",
+      "id": 8
+    },
+    {
+      "name": "Platinium Solvay Park",
+      "id": 7
+    },
+    {
+      "name": "Platinium Zachodnia 27 KKF",
+      "id": 17
+    }
+  ],
+  "crossfit": [
+    {
+      "name": "CF Krakow",
+      "id": 3
+    },
+    {
+      "name": "CrossFit Lea",
+      "id": 4
+    }
+  ]
+}
