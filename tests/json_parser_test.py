@@ -3,7 +3,7 @@ import json
 from main import json_parser
 
 
-class BotRequestsTestCase(unittest.TestCase):
+class JsonParserTestCase(unittest.TestCase):
 
     def test_get_class_id_from_perfectgym_classess_list(self):
         file = open('parser_test_data')
