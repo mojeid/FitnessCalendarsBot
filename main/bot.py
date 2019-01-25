@@ -12,11 +12,13 @@ class Bot:
     """
     _session = requests.session()
     _config = None
+    _baseUrl = None
     _logger = logging.getLogger("Bot")
 
     def __init__(self, session, config):
         self._session = session
         self._config = config
+        self._baseUrl = config['BaseURL']
         logging.basicConfig(level=logging.INFO)
 
 
@@ -29,9 +31,8 @@ class PerfectGymBot(Bot):
 
         :rtype: PerfectGymBot
         """
-        self._session.get('https://crossfit.perfectgym.pl/ClientPortal2/')
         payload = {'Login': credentials.username, 'Password': credentials.password}
-        self._session.post("https://crossfit.perfectgym.pl/ClientPortal2/Auth/Login", data=payload)
+        self._session.post(self._baseUrl + "Auth/Login", data=payload)
         return self
 
     def book_class(self, class_details):
@@ -51,8 +52,7 @@ class PerfectGymBot(Bot):
             return self
 
         booking_payload = {'classId': class_id}
-        response = self._session.post('https://crossfit.perfectgym.pl/ClientPortal2/Classes/ClassCalendar/BookClass',
-                                      booking_payload)
+        response = self._session.post(self._baseUrl + 'Classes/ClassCalendar/BookClass', booking_payload)
 
         if response.status_code == 200:
             self._logger.info('Class were properly booked!')
@@ -75,9 +75,7 @@ class PerfectGymBot(Bot):
             return self
 
         cancel_payload = {'classId': class_id}
-        response = self._session.post(
-            'https://crossfit.perfectgym.pl/ClientPortal2/Classes/ClassCalendar/CancelBooking',
-            cancel_payload)
+        response = self._session.post(self._baseUrl + 'Classes/ClassCalendar/CancelBooking', cancel_payload)
 
         if response.status_code == 200:
             self._logger.info('Classes were successfully cancelled!')
@@ -88,21 +86,19 @@ class PerfectGymBot(Bot):
     def _get_class_id(self, class_details):
         """Parses information about classes available and returns ID of classess matching class details param """
         club_payload = {"clubId": json_parser.get_club_id(class_details)}
-        r = self._session.post("https://crossfit.perfectgym.pl/ClientPortal2/Classes/ClassCalendar/WeeklyClasses",
-                               data=club_payload)
+        r = self._session.post(self._baseUrl + "Classes/ClassCalendar/WeeklyClasses", data=club_payload)
         classes_response_data = r.json()
 
         return json_parser.get_class_id_from_perfectgym_classess_list(classes_response_data, class_details)
 
     def _is_user_logged_in(self):
-        response = self._session.get(
-            'https://crossfit.perfectgym.pl/ClientPortal2/Profile/Profile/GetFamilyMembersForEdit')
+        response = self._session.get(self._baseUrl + 'Profile/Profile/GetFamilyMembersForEdit')
         return response.status_code == 200
 
     def _is_class_bookable(self, class_id):
         if not class_id:
             return False
 
-        url = "https://crossfit.perfectgym.pl/ClientPortal2/Classes/ClassCalendar/Details?classId={}".format(class_id)
+        url = self._baseUrl + 'Classes/ClassCalendar/Details?classId={}'.format(class_id)
         response = self._session.get(url)
         return (response.json())['Status'] == 'Bookable'
