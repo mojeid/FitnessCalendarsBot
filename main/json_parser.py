@@ -16,11 +16,11 @@ def get_class_id_from_perfectgym_classess_list(json_response, class_details):
     classes_start_time = class_details['date'] + "T" + class_details['startTime'] + ":00"
 
     jmespath_search_operator = "CalendarData[].ClassesPerHour[].ClassesPerDay[]" \
-                      "[?Name=='{name}' && Trainer=='{trainer}' && StartTime=='{start_time}'].Id". \
+                               "[?Name=='{name}' && Trainer=='{trainer}' && StartTime=='{start_time}'].Id". \
         format(name=class_details['title'], trainer=class_details['trainer'], start_time=classes_start_time)
 
-
     return max(jmespath.search(jmespath_search_operator, json_response))[0]
+
 
 def get_supported_fitness_networks():
     """
