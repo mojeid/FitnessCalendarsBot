@@ -20,7 +20,6 @@ class JsonParserTestCase(unittest.TestCase):
             "title": 'CrossFit Beginners'
         }
 
-        print(json_test_data)
         self.assertEqual(89352, json_parser.get_class_id_from_perfectgym_classess_list(json_test_data, classDetails))
 
     def test_supported_networks_list(self):

@@ -87,7 +87,7 @@ class PerfectGymBot(Bot):
 
     def _get_class_id(self, class_details):
         """Parses information about classes available and returns ID of classess matching class details param """
-        club_payload = {"clubId": self._get_club_id(class_details)}
+        club_payload = {"clubId": json_parser.get_club_id(class_details)}
         r = self._session.post("https://crossfit.perfectgym.pl/ClientPortal2/Classes/ClassCalendar/WeeklyClasses",
                                data=club_payload)
         classes_response_data = r.json()
@@ -106,14 +106,3 @@ class PerfectGymBot(Bot):
         url = "https://crossfit.perfectgym.pl/ClientPortal2/Classes/ClassCalendar/Details?classId={}".format(class_id)
         response = self._session.get(url)
         return (response.json())['Status'] == 'Bookable'
-
-    @staticmethod
-    def _get_club_id(class_details):
-        # In PerfectGym system 3 is hardcoded for CF Krakow and 4 for CF Lea
-        if 'Lea' in class_details['clubName']:
-            return 4
-        if 'Kraków' in class_details['clubName'] or 'Krakow' in class_details['clubName']:
-            return 3
-
-            self._logger.warning('There is no club with such name. Please provide correct club name')
-        return

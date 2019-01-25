@@ -1,5 +1,6 @@
 """ Module responsible data from custom PerfectGym app HTTP responses. """
 import json
+import jmespath
 import logging
 
 import os
@@ -10,25 +11,16 @@ _logger = logging.getLogger("json_parser")
 def get_class_id_from_perfectgym_classess_list(json_response, class_details):
     """ Parses JSON data and returns Class ID for specific class date/time and trainer."""
     class_id = None
-    classes_per_hour = ((json_response['CalendarData'])[0])['ClassesPerHour']
 
-    for entry in classes_per_hour:
-        # Classes calendar in Response is organised first by hour then by day.
-        if class_details['startTime'] not in entry['Hour']:
-            continue
-        for crossfit_classes in entry['ClassesPerDay']:
-            # skip empty results lists
-            if not crossfit_classes:
-                continue
-            # skip classes that does not match date or trainer requested
-            if class_details['date'] not in crossfit_classes[0]['StartTime'] or class_details[
-                'trainer'] != crossfit_classes[0]['Trainer']:
-                continue
+    # in PerfectGym startTime property is concatenated date and time with seconds.
+    classes_start_time = class_details['date'] + "T" + class_details['startTime'] + ":00"
 
-            class_id = crossfit_classes[0]['Id']
+    jmespath_search_operator = "CalendarData[].ClassesPerHour[].ClassesPerDay[]" \
+                      "[?Name=='{name}' && Trainer=='{trainer}' && StartTime=='{start_time}'].Id". \
+        format(name=class_details['title'], trainer=class_details['trainer'], start_time=classes_start_time)
 
-    return class_id
 
+    return max(jmespath.search(jmespath_search_operator, json_response))[0]
 
 def get_supported_fitness_networks():
     """
@@ -62,11 +54,32 @@ def get_list_of_clubs(fitness_network_name):
     return fitness_clubs
 
 
+def get_club_id(class_details):
+    """
+    Determines correct club ID in the system based on internal list of fitness clubs stored in json file.
+
+    :param class_details: dict with class details must contain fitnessNetwork & clubName entries.
+
+    :return: id of specified club in vendor's system
+    """
+    club_name = class_details['clubName']
+    # List of all supported networks and clubs
+    clubs_data = _read_fitness_clubs_json()
+
+    try:
+        search_operator = "*[?name == '{club}'].id".format(club=club_name)
+        # There will be only one value in 2d array so by using max() we can extract this number.
+        return max(max(jmespath.search(search_operator, clubs_data)))
+    except ValueError:
+        _logger.error('ERROR: There is no club with such name. Please provide correct club name!')
+        return
+
+
 def _read_fitness_clubs_json():
     if 'tests' in os.getcwd():
         filepath = '../main/resources/fitness_clubs.json'
     else:
-        filepath = 'main/resources/fitness_clubs.json'
+        filepath = 'resources/fitness_clubs.json'
 
     file = open(filepath)
     json_data = json.loads(file.read())
