@@ -1,14 +1,13 @@
 import unittest
 import json
 
-
 from main import json_parser
 
 
 class JsonParserTestCase(unittest.TestCase):
 
     def test_get_class_id_from_perfectgym_classess_list(self):
-        file = open('parser_test_data')
+        file = open('resources/parser_clubs_test_data')
         json_test_data = json.loads(file.read())
         file.close()
 
@@ -21,6 +20,15 @@ class JsonParserTestCase(unittest.TestCase):
         }
 
         self.assertEqual(89352, json_parser.get_class_id_from_perfectgym_classess_list(json_test_data, classDetails))
+
+    def test_get_booked_classes_from_users_calendar(self):
+        file = open('resources/parser_booked_classes_test_data')
+        json_test_data = json.loads(file.read())
+        file.close()
+
+        self.assertEqual(2, len(json_parser.get_booked_classes_from_users_calendar(json_response=json_test_data)))
+        self.assertEqual("WOD Beginners",
+                         json_parser.get_booked_classes_from_users_calendar(json_response=json_test_data)[1][1])
 
     def test_supported_networks_list(self):
         SUPPORTED_NETWORKS_COUNT = 2
