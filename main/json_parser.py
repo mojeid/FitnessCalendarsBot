@@ -34,7 +34,6 @@ def get_booked_classes_from_users_calendar(json_response):
     FitnessClasses = namedtuple('FitnessClasses', 'id, name, start_time, club, zone')
 
     for x in json_classes_list:
-        print(x['Id'])
         booked_classes_list.append(FitnessClasses(x['Id'], x['Name'], x['StartTime'], x['Club'], x['Zone']))
 
     return booked_classes_list
