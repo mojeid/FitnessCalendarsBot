@@ -83,6 +83,17 @@ class PerfectGymBot(Bot):
             self._logger.warning('Could not cancel your booking!')
         return self
 
+    def show_users_booked_classes(self):
+        """
+        :return: List of classes booked by user.
+        """
+        response = self._session.get(self._baseUrl + 'MyCalendar/MyCalendar/GetCalendar')
+        if not response.status_code == 200:
+            self._logger.warning("Could not access user's list of classes.")
+            print(response.status_code)
+
+        return json_parser.get_booked_classes_from_users_calendar(response.json())
+
     def _get_class_id(self, class_details):
         """
         Sends request to get classes available in whole week in PerfectGym system.

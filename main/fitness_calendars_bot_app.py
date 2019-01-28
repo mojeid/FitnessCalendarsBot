@@ -7,7 +7,7 @@ if __name__ == "__main__":
     classDetails = {
         "clubName": "CrossFit Lea",
         "startTime": "07:00",
-        "date": "2019-01-28",
+        "date": "2019-02-04",
         "trainer": "Kamil Klich",
         "title": 'CrossFit Beginners'
     }
@@ -16,4 +16,4 @@ if __name__ == "__main__":
     config.read('resources/configuration.ini')
 
     perfectGymBot = bot.PerfectGymBot(session=session_builder.Session.build(), config=config['Crossfit'])
-    perfectGymBot.cancel_booking(classDetails)
+    lista = perfectGymBot.client_login().show_users_booked_classes()
