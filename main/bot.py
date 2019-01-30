@@ -1,6 +1,5 @@
 # Module responsible for sending the requests to the page #
 
-import requests
 import logging
 from main import json_parser
 from main.resources import credentials
@@ -10,7 +9,7 @@ class Bot:
     """
     Represents basic Bot functionality, common for all fitness apps&pages bots.
     """
-    _session = requests.session()
+    _session = None
     _config = None
     _baseUrl = None
     _logger = logging.getLogger("Bot")
@@ -19,7 +18,6 @@ class Bot:
         self._session = session
         self._config = config
         self._baseUrl = config['BaseURL']
-        logging.basicConfig(level=logging.INFO)
 
 
 class PerfectGymBot(Bot):
@@ -100,7 +98,7 @@ class PerfectGymBot(Bot):
         r = self._session.post(self._baseUrl + "Classes/ClassCalendar/WeeklyClasses", data=club_payload)
         classes_response_data = r.json()
 
-        return json_parser.get_class_id_from_perfectgym_classess_list(classes_response_data, class_details)
+        return json_parser.get_class_id_from_perfectgym_classes_list(classes_response_data, class_details)
 
     def _ensure_user_logged_in(self):
         """

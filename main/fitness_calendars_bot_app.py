@@ -1,8 +1,13 @@
-from main import session_builder, bot, json_parser
+import logging
+
+from main import session_builder, bot
 import configparser
 
 if __name__ == "__main__":
     # execute only if run as a script
+    config = configparser.ConfigParser()
+    config.read('resources/configuration.ini')
+    logging.basicConfig(level=config['DEFAULT']['logging_level'])
 
     classDetails = {
         "clubName": "CrossFit Lea",
@@ -12,7 +17,5 @@ if __name__ == "__main__":
         "title": 'CrossFit Beginners'
     }
 
-    config = configparser.ConfigParser()
-    config.read('resources/configuration.ini')
-
     perfectGymBot = bot.PerfectGymBot(session=session_builder.Session.build(), config=config['Crossfit'])
+    perfectGymBot.book_class(classDetails)
