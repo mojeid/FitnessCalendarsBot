@@ -16,4 +16,3 @@ if __name__ == "__main__":
     config.read('resources/configuration.ini')
 
     perfectGymBot = bot.PerfectGymBot(session=session_builder.Session.build(), config=config['Crossfit'])
-    lista = perfectGymBot.client_login().show_users_booked_classes()
