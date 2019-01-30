@@ -76,7 +76,7 @@ class PerfectGymBot(Bot):
             self._logger.warning('Could not cancel your booking!')
         return self
 
-    def show_booked_classes(self):
+    def get_booked_classes(self):
         """
         :return: List of classes booked by user.
         """
