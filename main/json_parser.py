@@ -10,7 +10,7 @@ import os
 _logger = logging.getLogger("json_parser")
 
 
-def get_class_id_from_perfectgym_classess_list(json_response, class_details):
+def get_class_id_from_perfectgym_classes_list(json_response, class_details):
     """ Parses JSON data and returns Class ID for specific class date/time and trainer."""
 
     # in PerfectGym startTime property is concatenated date and time with seconds.
