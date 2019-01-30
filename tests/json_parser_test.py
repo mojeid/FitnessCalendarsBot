@@ -6,7 +6,7 @@ from main import json_parser
 
 class JsonParserTestCase(unittest.TestCase):
 
-    def test_get_class_id_from_perfectgym_classess_list(self):
+    def test_get_class_id_from_perfectgym_classes_list(self):
         file = open('resources/parser_clubs_test_data')
         json_test_data = json.loads(file.read())
         file.close()
@@ -19,7 +19,7 @@ class JsonParserTestCase(unittest.TestCase):
             "title": 'CrossFit Beginners'
         }
 
-        self.assertEqual(89352, json_parser.get_class_id_from_perfectgym_classess_list(json_test_data, classDetails))
+        self.assertEqual(89352, json_parser.get_class_id_from_perfectgym_classes_list(json_test_data, classDetails))
 
     def test_get_booked_classes_from_users_calendar(self):
         file = open('resources/parser_booked_classes_test_data')
