@@ -1,0 +1,268 @@
+{
+  "RecentItems": [
+    {
+      "Id": 63602,
+      "Type": "GroupClass",
+      "Name": "CrossFit Beginners",
+      "StartTime": "2019-01-30T07:00:00",
+      "EndTime": "2019-01-30T08:00:00",
+      "Users": [
+        {
+          "Id": 9630,
+          "FirstName": "Kuba",
+          "LastName": "Sowicki",
+          "PhotoUrl": null,
+          "Initials": "TY",
+          "IsCurrentUser": true
+        }
+      ],
+      "Club": "CrossFit Lea",
+      "Zone": "LEA",
+      "Duration": "PT1H",
+      "NumberOfPeople": null
+    },
+    {
+      "Id": 24208,
+      "Type": "GroupClass",
+      "Name": "WOD Beginners",
+      "StartTime": "2019-01-31T08:00:00",
+      "EndTime": "2019-01-31T09:00:00",
+      "Users": [
+        {
+          "Id": 9630,
+          "FirstName": "Kuba",
+          "LastName": "Sowicki",
+          "PhotoUrl": null,
+          "Initials": "TY",
+          "IsCurrentUser": true
+        }
+      ],
+      "Club": "CrossFit Kraków",
+      "Zone": "KRA",
+      "Duration": "PT1H",
+      "NumberOfPeople": null
+    }
+  ],
+  "FutureItems": {
+    "Page": 0,
+    "Items": [],
+    "HasMore": false
+  },
+  "PastItems": {
+    "Page": 0,
+    "Items": [
+      {
+        "Id": 20787,
+        "Type": "GroupClass",
+        "Name": "OPEN GYM",
+        "StartTime": "2019-01-25T06:00:00",
+        "EndTime": "2019-01-25T07:00:00",
+        "Users": [
+          {
+            "Id": 9630,
+            "FirstName": "Kuba",
+            "LastName": "Sowicki",
+            "PhotoUrl": null,
+            "Initials": "TY",
+            "IsCurrentUser": true
+          }
+        ],
+        "Club": "CrossFit Kraków",
+        "Zone": "KRA",
+        "Duration": "PT1H",
+        "NumberOfPeople": null
+      },
+      {
+        "Id": 71496,
+        "Type": "GroupClass",
+        "Name": "OPEN GYM",
+        "StartTime": "2019-01-23T06:00:00",
+        "EndTime": "2019-01-23T07:00:00",
+        "Users": [
+          {
+            "Id": 9630,
+            "FirstName": "Kuba",
+            "LastName": "Sowicki",
+            "PhotoUrl": null,
+            "Initials": "TY",
+            "IsCurrentUser": true
+          }
+        ],
+        "Club": "CrossFit Lea",
+        "Zone": "LEA",
+        "Duration": "PT1H",
+        "NumberOfPeople": null
+      },
+      {
+        "Id": 97951,
+        "Type": "GroupClass",
+        "Name": "OPEN GYM",
+        "StartTime": "2019-01-05T09:00:00",
+        "EndTime": "2019-01-05T10:00:00",
+        "Users": [
+          {
+            "Id": 9630,
+            "FirstName": "Kuba",
+            "LastName": "Sowicki",
+            "PhotoUrl": null,
+            "Initials": "TY",
+            "IsCurrentUser": true
+          }
+        ],
+        "Club": "CrossFit Lea",
+        "Zone": "LEA",
+        "Duration": "PT1H",
+        "NumberOfPeople": null
+      },
+      {
+        "Id": 71491,
+        "Type": "GroupClass",
+        "Name": "OPEN GYM",
+        "StartTime": "2018-12-19T06:00:00",
+        "EndTime": "2018-12-19T07:00:00",
+        "Users": [
+          {
+            "Id": 9630,
+            "FirstName": "Kuba",
+            "LastName": "Sowicki",
+            "PhotoUrl": null,
+            "Initials": "TY",
+            "IsCurrentUser": true
+          }
+        ],
+        "Club": "CrossFit Lea",
+        "Zone": "LEA",
+        "Duration": "PT1H",
+        "NumberOfPeople": null
+      },
+      {
+        "Id": 71490,
+        "Type": "GroupClass",
+        "Name": "OPEN GYM",
+        "StartTime": "2018-12-12T06:00:00",
+        "EndTime": "2018-12-12T07:00:00",
+        "Users": [
+          {
+            "Id": 9630,
+            "FirstName": "Kuba",
+            "LastName": "Sowicki",
+            "PhotoUrl": null,
+            "Initials": "TY",
+            "IsCurrentUser": true
+          }
+        ],
+        "Club": "CrossFit Lea",
+        "Zone": "LEA",
+        "Duration": "PT1H",
+        "NumberOfPeople": null
+      },
+      {
+        "Id": 20773,
+        "Type": "GroupClass",
+        "Name": "OPEN GYM",
+        "StartTime": "2018-10-19T06:00:00",
+        "EndTime": "2018-10-19T07:00:00",
+        "Users": [
+          {
+            "Id": 9630,
+            "FirstName": "Kuba",
+            "LastName": "Sowicki",
+            "PhotoUrl": null,
+            "Initials": "TY",
+            "IsCurrentUser": true
+          }
+        ],
+        "Club": "CrossFit Kraków",
+        "Zone": "KRA",
+        "Duration": "PT1H",
+        "NumberOfPeople": null
+      },
+      {
+        "Id": 10362,
+        "Type": "GroupClass",
+        "Name": "OPEN GYM",
+        "StartTime": "2018-10-15T06:00:00",
+        "EndTime": "2018-10-15T07:00:00",
+        "Users": [
+          {
+            "Id": 9630,
+            "FirstName": "Kuba",
+            "LastName": "Sowicki",
+            "PhotoUrl": null,
+            "Initials": "TY",
+            "IsCurrentUser": true
+          }
+        ],
+        "Club": "CrossFit Kraków",
+        "Zone": "KRA",
+        "Duration": "PT1H",
+        "NumberOfPeople": null
+      },
+      {
+        "Id": 97939,
+        "Type": "GroupClass",
+        "Name": "OPEN GYM",
+        "StartTime": "2018-10-13T09:00:00",
+        "EndTime": "2018-10-13T10:00:00",
+        "Users": [
+          {
+            "Id": 9630,
+            "FirstName": "Kuba",
+            "LastName": "Sowicki",
+            "PhotoUrl": null,
+            "Initials": "TY",
+            "IsCurrentUser": true
+          }
+        ],
+        "Club": "CrossFit Lea",
+        "Zone": "LEA",
+        "Duration": "PT1H",
+        "NumberOfPeople": null
+      },
+      {
+        "Id": 20392,
+        "Type": "GroupClass",
+        "Name": "OPEN GYM",
+        "StartTime": "2018-10-11T06:00:00",
+        "EndTime": "2018-10-11T07:00:00",
+        "Users": [
+          {
+            "Id": 9630,
+            "FirstName": "Kuba",
+            "LastName": "Sowicki",
+            "PhotoUrl": null,
+            "Initials": "TY",
+            "IsCurrentUser": true
+          }
+        ],
+        "Club": "CrossFit Kraków",
+        "Zone": "KRA",
+        "Duration": "PT1H",
+        "NumberOfPeople": null
+      },
+      {
+        "Id": 53994,
+        "Type": "GroupClass",
+        "Name": "OPEN GYM",
+        "StartTime": "2018-10-08T06:00:00",
+        "EndTime": "2018-10-08T07:00:00",
+        "Users": [
+          {
+            "Id": 9630,
+            "FirstName": "Kuba",
+            "LastName": "Sowicki",
+            "PhotoUrl": null,
+            "Initials": "TY",
+            "IsCurrentUser": true
+          }
+        ],
+        "Club": "CrossFit Lea",
+        "Zone": "LEA",
+        "Duration": "PT1H",
+        "NumberOfPeople": null
+      }
+    ],
+    "HasMore": true
+  },
+  "HasRelatives": false
+}
