@@ -41,9 +41,13 @@ class PerfectGymBot(Bot):
         self._ensure_user_logged_in()
 
         class_id = self._get_class_id(class_details)
-        if not class_id or not self._is_class_bookable(class_id):
-            self._logger.warning('Wrong class information or class is not bookable. Please check your classes details.')
+
+        if not class_id:
+            self._logger.warning('Wrong class information. Please check your classes details.')
             return self
+
+        if not self._is_class_bookable(class_id):
+            self._logger.warning('Classes are not bookable! Classes are either full or its too early too book them')
 
         booking_payload = {'classId': class_id}
         response = self._session.post(self._baseUrl + 'Classes/ClassCalendar/BookClass', booking_payload)
@@ -51,7 +55,7 @@ class PerfectGymBot(Bot):
         if response.status_code == 200:
             self._logger.info('Class were properly booked!')
         else:
-            self._logger.info('There was an error while booking. Classes were not booked')
+            self._logger.warning('There was an error while booking. Classes were not booked')
 
         return self
 
