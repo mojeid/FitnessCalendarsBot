@@ -90,7 +90,7 @@ class PerfectGymBot(Bot):
         if not response.status_code == 200:
             self._logger.warning("Could not access user's list of classes.")
 
-        return json_parser.get_booked_classes_from_users_calendar(response.json())
+        return json_parser.PerfectGymParser.parse_booked_classes_from_users_calendar(response.json())
 
     def _get_class_id(self, class_details):
         """
@@ -102,7 +102,7 @@ class PerfectGymBot(Bot):
         r = self._session.post(self._baseUrl + "Classes/ClassCalendar/WeeklyClasses", data=club_payload)
         classes_response_data = r.json()
 
-        return json_parser.get_class_id_from_perfectgym_classes_list(classes_response_data, class_details)
+        return json_parser.PerfectGymParser.get_class_id_from_classes_list(classes_response_data, class_details)
 
     def _ensure_user_logged_in(self):
         """
@@ -116,10 +116,19 @@ class PerfectGymBot(Bot):
                     'Login was not successful 2 times in a row. Please check your account credentials.')
 
     def _is_user_logged_in(self):
+        """
+        :return: True when user is logged in and can access his profile. False otherwise.
+        """
         response = self._session.get(self._baseUrl + 'Profile/Profile/GetFamilyMembersForEdit')
         return response.status_code == 200
 
     def _is_class_bookable(self, class_id):
+        """
+        Checks whether given class can be booked by User. Some classes are not bookable because they are full or it's
+        too early to book them.
+
+        :return: True when class can be booked. False otherwise.
+        """
         if not class_id:
             return False
 

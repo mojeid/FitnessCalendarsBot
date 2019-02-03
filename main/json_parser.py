@@ -10,33 +10,39 @@ import os
 _logger = logging.getLogger("json_parser")
 
 
-def get_class_id_from_perfectgym_classes_list(json_response, class_details):
-    """ Parses JSON data and returns Class ID for specific class date/time and trainer."""
-
-    # in PerfectGym startTime property is concatenated date and time with seconds.
-    classes_start_time = class_details['date'] + "T" + class_details['startTime'] + ":00"
-
-    jmespath_search_operator = "CalendarData[].ClassesPerHour[].ClassesPerDay[]" \
-                               "[?Name=='{name}' && Trainer=='{trainer}' && StartTime=='{start_time}'].Id". \
-        format(name=class_details['title'], trainer=class_details['trainer'], start_time=classes_start_time)
-
-    return max(jmespath.search(jmespath_search_operator, json_response))[0]
-
-
-def get_booked_classes_from_users_calendar(json_response):
+class PerfectGymParser:
     """
-    Extract list of classes that user has booked form user's calendar.
-    :param json_response: Response from PerfectGym system page.
-    :return: List with each booked class as tuple
+    Provides parsing functionality specific to PerfectGym system.
     """
-    json_classes_list = json_response['RecentItems']
-    booked_classes_list = list()
-    FitnessClasses = namedtuple('FitnessClasses', 'id, name, start_time, club, zone')
 
-    for x in json_classes_list:
-        booked_classes_list.append(FitnessClasses(x['Id'], x['Name'], x['StartTime'], x['Club'], x['Zone']))
+    @staticmethod
+    def get_class_id_from_classes_list(json_response, class_details):
+        """ Parses JSON data and returns Class ID for specific class date/time and trainer."""
 
-    return booked_classes_list
+        # in PerfectGym startTime property is concatenated date and time with seconds.
+        classes_start_time = class_details['date'] + "T" + class_details['startTime'] + ":00"
+
+        jmespath_search_operator = "CalendarData[].ClassesPerHour[].ClassesPerDay[]" \
+                                   "[?Name=='{name}' && Trainer=='{trainer}' && StartTime=='{start_time}'].Id". \
+            format(name=class_details['title'], trainer=class_details['trainer'], start_time=classes_start_time)
+
+        return max(jmespath.search(jmespath_search_operator, json_response))[0]
+
+    @staticmethod
+    def parse_booked_classes_from_users_calendar(json_response):
+        """
+        Extract list of classes that user has booked form user's calendar.
+        :param json_response: Response from PerfectGym system page.
+        :return: List with each booked class as tuple
+        """
+        json_classes_list = json_response['RecentItems']
+        booked_classes_list = list()
+        FitnessClasses = namedtuple('FitnessClasses', 'id, name, start_time, club, zone')
+
+        for x in json_classes_list:
+            booked_classes_list.append(FitnessClasses(x['Id'], x['Name'], x['StartTime'], x['Club'], x['Zone']))
+
+        return booked_classes_list
 
 
 def get_supported_fitness_networks():
