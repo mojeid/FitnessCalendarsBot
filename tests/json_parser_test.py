@@ -19,16 +19,18 @@ class JsonParserTestCase(unittest.TestCase):
             "title": 'CrossFit Beginners'
         }
 
-        self.assertEqual(89352, json_parser.get_class_id_from_perfectgym_classes_list(json_test_data, classDetails))
+        self.assertEqual(89352,
+                         json_parser.PerfectGymParser.get_class_id_from_classes_list(json_test_data, classDetails))
 
     def test_get_booked_classes_from_users_calendar(self):
         file = open('resources/parser_booked_classes_test_data')
         json_test_data = json.loads(file.read())
         file.close()
+        parser = json_parser.PerfectGymParser
 
-        self.assertEqual(2, len(json_parser.get_booked_classes_from_users_calendar(json_response=json_test_data)))
+        self.assertEqual(2, len(parser.parse_booked_classes_from_users_calendar(json_response=json_test_data)))
         self.assertEqual("WOD Beginners",
-                         json_parser.get_booked_classes_from_users_calendar(json_response=json_test_data)[1][1])
+                         parser.parse_booked_classes_from_users_calendar(json_response=json_test_data)[1][1])
 
     def test_supported_networks_list(self):
         SUPPORTED_NETWORKS_COUNT = 2
