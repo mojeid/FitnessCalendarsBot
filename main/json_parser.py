@@ -37,10 +37,12 @@ class PerfectGymParser:
         """
         json_classes_list = json_response['RecentItems']
         booked_classes_list = list()
-        FitnessClasses = namedtuple('FitnessClasses', 'id, name, start_time, club, zone')
 
         for x in json_classes_list:
-            booked_classes_list.append(FitnessClasses(x['Id'], x['Name'], x['StartTime'], x['Club'], x['Zone']))
+            from main.data_containers import FitnessClasses
+            booked_classes_list.append(
+                FitnessClasses(x['Id'], x['Name'], x['StartTime'][:10], x['StartTime'][11:], None, x['Club'],
+                               x['Zone']))
 
         return booked_classes_list
 
