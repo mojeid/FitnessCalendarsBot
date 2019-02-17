@@ -23,7 +23,7 @@ class Bot:
 class PerfectGymBot(Bot):
     """ Bot designed to work with PerfectGym system used by Platinium, CF Krakow and others"""
 
-    def client_login(self):
+    def login(self):
         """
         Performs login to the application using credentials from credentials.py file not stored in VCS
 
@@ -110,7 +110,7 @@ class PerfectGymBot(Bot):
         error message is shown.
         """
         if not self._is_user_logged_in():
-            self.client_login()
+            self.login()
             if not self._is_user_logged_in():
                 self._logger.warning(
                     'Login was not successful 2 times in a row. Please check your account credentials.')
@@ -135,3 +135,23 @@ class PerfectGymBot(Bot):
         url = self._baseUrl + 'Classes/ClassCalendar/Details?classId={}'.format(class_id)
         response = self._session.get(url)
         return (response.json())['Status'] == 'Bookable'
+
+
+class EFitnessBot(Bot):
+    """ Bot designed to work with `EFitness system <http://http://efitness.pl/>`_ used by Grappling Krakow etc"""
+
+    def login(self):
+        """
+        Performs login to the application using credentials from credentials.py file not stored in VCS
+        :rtype: EFitnessBot
+        """
+        payload = {'Login': credentials.username, 'Password': credentials.password}
+        self._session.post(self._baseUrl + "Login/SystemLogin", data=payload)
+        return self
+
+    def _is_user_logged_in(self):
+        """
+        :return: True when user is logged in and can access his profile. False otherwise.
+        """
+        response = self._session.get(self._baseUrl + 'MemberInfo/Index')
+        return 'wymaga autoryzacji' not in response.text
