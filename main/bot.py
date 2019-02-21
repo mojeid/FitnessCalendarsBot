@@ -2,6 +2,8 @@
 
 import logging
 
+from bs4 import BeautifulSoup
+
 from main import json_parser
 from main.resources import credentials
 
@@ -150,9 +152,64 @@ class EFitnessBot(Bot):
         self._session.post(self._baseUrl + "Login/SystemLogin", data=payload)
         return self
 
+    def book_class(self, class_details):
+        """
+        Books classes for user based on class details like start date/time, club and trainer.
+        User login is verified inside the method already.
+        """
+
+        # self._ensure_user_logged_in()
+        #
+        class_id = self._get_class_id(class_details)
+        print(class_id)
+        #
+        # if not class_id:
+        #     self._logger.warning('Wrong class information. Please check your classes details.')
+        #     return self
+        #
+        # if not self._is_class_bookable(class_id):
+        #     self._logger.warning('Classes are not bookable! Classes are either full or its too early too book them')
+        #
+        # booking_payload = {'classId': class_id}
+        # response = self._session.post(self._baseUrl + 'Classes/ClassCalendar/BookClass', booking_payload)
+        #
+        # if response.status_code == 200:
+        #     self._logger.info('Class were properly booked!')
+        # else:
+        #     self._logger.warning('There was an error while booking. Classes were not booked')
+
+        return self
+
     def _is_user_logged_in(self):
         """
         :return: True when user is logged in and can access his profile. False otherwise.
         """
         response = self._session.get(self._baseUrl + 'MemberInfo/Index')
         return 'wymaga autoryzacji' not in response.text
+
+    def _get_class_id(self, class_details):
+        """
+       Sends request to get classes available in whole week in EFitness system.
+       Then parses information about classes available and returns ID of classes matching class details param
+       """
+        start_date = '23-02-2019'
+        response = self._session.get(
+            self._baseUrl + 'kalendarz-zajec?room=1209&view=WeekCascading&day={}'.format(start_date))
+        soup = BeautifulSoup(response.text, 'html.parser')
+        classes = soup.find_all(class_='event')
+
+        # TODO: refactor those 2 loops
+        # Go through classes and find ones with matching trainer and name
+        matching_classes_ids = list()
+        for event in classes:
+            children = event.findChildren()
+            if children[2].text == class_details.name \
+                    and children[3].text == class_details.trainer:
+                matching_classes_ids.append(event.get('meta:id'))
+
+        # check multiple matching classes to find exact one by date.
+        for event_id in matching_classes_ids:
+            response = self._session.get(self._baseUrl + 'schedule/showoverlay?schiid={}'.format(event_id))
+            soup = BeautifulSoup(response.text, 'html.parser')
+            if soup.find("span", attrs={"class": "dark"}).text[-10:] == class_details.date:
+                return event_id
