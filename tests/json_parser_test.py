@@ -1,7 +1,8 @@
-import unittest
 import json
+import unittest
 
 from main import json_parser
+from main.data_containers import FitnessClasses
 
 
 class JsonParserTestCase(unittest.TestCase):
@@ -11,16 +12,10 @@ class JsonParserTestCase(unittest.TestCase):
         json_test_data = json.loads(file.read())
         file.close()
 
-        classDetails = {
-            "clubName": "Crossfit Lea",
-            "startTime": "10:00",
-            "date": "2019-01-27",
-            "trainer": "Wiktor Stopyra",
-            "title": 'CrossFit Beginners'
-        }
-
+        class_details = FitnessClasses(None, 'CrossFit Beginners', '2019-01-27', '10:00', 'Wiktor Stopyra',
+                                       'Crossfit Lea', None)
         self.assertEqual(89352,
-                         json_parser.PerfectGymParser.get_class_id_from_classes_list(json_test_data, classDetails))
+                         json_parser.PerfectGymParser.get_class_id_from_classes_list(json_test_data, class_details))
 
     def test_get_booked_classes_from_users_calendar(self):
         file = open('resources/parser_booked_classes_test_data')

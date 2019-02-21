@@ -1,6 +1,7 @@
 # Module responsible for sending the requests to the page #
 
 import logging
+
 from main import json_parser
 from main.resources import credentials
 
@@ -97,7 +98,7 @@ class PerfectGymBot(Bot):
         Sends request to get classes available in whole week in PerfectGym system.
         Then parses information about classes available and returns ID of classess matching class details param
         """
-        start_date = class_details['date'] + "T" + "00:00:00"
+        start_date = class_details.date + "T" + "00:00:00"
         club_payload = {"clubId": json_parser.get_club_id(class_details), "date": start_date}
         r = self._session.post(self._baseUrl + "Classes/ClassCalendar/WeeklyClasses", data=club_payload)
         classes_response_data = r.json()

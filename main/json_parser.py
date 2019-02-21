@@ -1,11 +1,9 @@
 """ Module responsible data from custom PerfectGym app HTTP responses. """
 import json
-from collections import namedtuple
+import logging
+import os
 
 import jmespath
-import logging
-
-import os
 
 _logger = logging.getLogger("json_parser")
 
@@ -20,11 +18,11 @@ class PerfectGymParser:
         """ Parses JSON data and returns Class ID for specific class date/time and trainer."""
 
         # in PerfectGym startTime property is concatenated date and time with seconds.
-        classes_start_time = class_details['date'] + "T" + class_details['startTime'] + ":00"
+        classes_start_time = class_details.date + "T" + class_details.start_time + ":00"
 
         jmespath_search_operator = "CalendarData[].ClassesPerHour[].ClassesPerDay[]" \
                                    "[?Name=='{name}' && Trainer=='{trainer}' && StartTime=='{start_time}'].Id". \
-            format(name=class_details['title'], trainer=class_details['trainer'], start_time=classes_start_time)
+            format(name=class_details.name, trainer=class_details.trainer, start_time=classes_start_time)
 
         return max(jmespath.search(jmespath_search_operator, json_response))[0]
 
@@ -87,7 +85,7 @@ def get_club_id(class_details):
 
     :return: id of specified club in vendor's system
     """
-    club_name = class_details['clubName']
+    club_name = class_details.club
     # List of all supported networks and clubs
     clubs_data = _read_fitness_clubs_json()
 
