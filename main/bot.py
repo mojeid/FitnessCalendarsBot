@@ -192,9 +192,8 @@ class EFitnessBot(Bot):
        Sends request to get classes available in whole week in EFitness system.
        Then parses information about classes available and returns ID of classes matching class details param
        """
-        start_date = '23-02-2019'
         response = self._session.get(
-            self._baseUrl + 'kalendarz-zajec?room=1209&view=WeekCascading&day={}'.format(start_date))
+            self._baseUrl + 'kalendarz-zajec?room=1209&view=WeekCascading&day={}'.format(class_details.date))
         soup = BeautifulSoup(response.text, 'html.parser')
         classes = soup.find_all(class_='event')
 
