@@ -54,5 +54,19 @@
       "name": "CrossFit Lea",
       "id": 4
     }
+  ],
+  "grappling": [
+    {
+      "name": "Nad Struga",
+      "id": 1209
+    },
+    {
+      "name": "Wola - sala 1",
+      "id": 1207
+    },
+    {
+      "name": "Wola - sala 2",
+      "id": 1208
+    }
   ]
 }

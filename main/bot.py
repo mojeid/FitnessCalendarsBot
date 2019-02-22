@@ -193,7 +193,8 @@ class EFitnessBot(Bot):
        Then parses information about classes available and returns ID of classes matching class details param
        """
         response = self._session.get(
-            self._baseUrl + 'kalendarz-zajec?room=1209&view=WeekCascading&day={}'.format(class_details.date))
+            self._baseUrl + 'kalendarz-zajec?room={}&view=WeekCascading&day={}'.
+            format(json_parser.get_club_id(class_details), class_details.date))
         soup = BeautifulSoup(response.text, 'html.parser')
         classes = soup.find_all(class_='event')
 
