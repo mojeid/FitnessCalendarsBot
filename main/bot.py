@@ -162,25 +162,25 @@ class EFitnessBot(Bot):
         #
         class_id = self._get_class_id(class_details)
         print(class_id)
-
-        if not class_id:
-            self._logger.warning('Wrong class information. Please check your classes details.')
-            return self
-
-        # if not self._is_class_bookable(class_id):
-        #     self._logger.warning('Classes are not bookable! Classes are either full or its too early too book them')
-
-        booking_payload = {'id': class_id, 'memberID': '3956236'}
-        response = self._session.post(self._baseUrl + 'Schedule/RegisterForClass', booking_payload)
-
-        print(response)
-        print(response.json())
-        if response.status_code == 200 and response.json()['Success']:
-            self._logger.info('Class were properly booked!')
-        else:
-            self._logger.warning('There was an error while booking. Classes were not booked')
-
-        return self
+        #
+        # if not class_id:
+        #     self._logger.warning('Wrong class information. Please check your classes details.')
+        #     return self
+        #
+        # # if not self._is_class_bookable(class_id):
+        # #     self._logger.warning('Classes are not bookable! Classes are either full or its too early too book them')
+        #
+        # booking_payload = {'id': class_id, 'memberID': '3956236'}
+        # response = self._session.post(self._baseUrl + 'Schedule/RegisterForClass', booking_payload)
+        #
+        # print(response)
+        # print(response.json())
+        # if response.status_code == 200 and response.json()['Success']:
+        #     self._logger.info('Class were properly booked!')
+        # else:
+        #     self._logger.warning('There was an error while booking. Classes were not booked')
+        #
+        # return self
 
     def _is_user_logged_in(self):
         """
@@ -195,8 +195,7 @@ class EFitnessBot(Bot):
        Then parses information about classes available and returns ID of classes matching class details param
        """
         response = self._session.get(
-            self._baseUrl + 'kalendarz-zajec?room={}&view=WeekCascading&day={}'.
-            format(json_parser.get_club_id(class_details), class_details.date))
+            self._baseUrl + 'kalendarz-zajec?room=&view=WeekCascading&day={}'.format(class_details.date))
         soup = BeautifulSoup(response.text, 'html.parser')
         classes = soup.find_all(class_='event')
 

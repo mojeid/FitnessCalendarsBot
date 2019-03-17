@@ -10,7 +10,7 @@ if __name__ == "__main__":
     config.read('resources/configuration.ini')
     logging.basicConfig(level=config['DEFAULT']['logging_level'])
 
-    class_details = FitnessClasses(None, 'TRX', '27-02-2019', '20:00', 'Łukasz Balicki', 'Silownia',
+    class_details = FitnessClasses(None, 'TRX', '19-033-2019', '18:00', 'Łukasz Balicki', 'Infinity',
                                    None)
 
     # perfectGymBot = bot.PerfectGymBot(session=session_builder.Session.build(), config=config['Platinium'])

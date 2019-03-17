@@ -44,6 +44,27 @@ class PerfectGymParser:
 
         return booked_classes_list
 
+    def get_club_id(class_details):
+        """
+        Determines correct club ID in the system based on internal list of PerfectGym fitness clubs stored in json file.
+
+        :param class_details: dict with class details must contain fitnessNetwork & clubName entries.
+
+        :return: id of specified club in vendor's system
+        """
+        club_name = class_details.club
+        # List of all supported networks and clubs
+        clubs_data = _read_fitness_clubs_json()
+
+        try:
+            search_operator = "*[?name == '{club}'].id".format(club=club_name)
+            print(search_operator)
+            # There will be only one value in 2d array so by using max() we can extract this number.
+            return max(max(jmespath.search(search_operator, clubs_data)))
+        except ValueError:
+            _logger.error('ERROR: There is no club with such name. Please provide correct club name!')
+            return
+
 
 def get_supported_fitness_networks():
     """
@@ -77,32 +98,11 @@ def get_list_of_clubs(fitness_network_name):
     return fitness_clubs
 
 
-def get_club_id(class_details):
-    """
-    Determines correct club ID in the system based on internal list of fitness clubs stored in json file.
-
-    :param class_details: dict with class details must contain fitnessNetwork & clubName entries.
-
-    :return: id of specified club in vendor's system
-    """
-    club_name = class_details.club
-    # List of all supported networks and clubs
-    clubs_data = _read_fitness_clubs_json()
-
-    try:
-        search_operator = "*[?name == '{club}'].id".format(club=club_name)
-        # There will be only one value in 2d array so by using max() we can extract this number.
-        return max(max(jmespath.search(search_operator, clubs_data)))
-    except ValueError:
-        _logger.error('ERROR: There is no club with such name. Please provide correct club name!')
-        return
-
-
 def _read_fitness_clubs_json():
     if 'tests' in os.getcwd():
-        filepath = '../main/resources/fitness_clubs.json'
+        filepath = '../main/resources/perfectgym_fitness_clubs.json'
     else:
-        filepath = 'resources/fitness_clubs.json'
+        filepath = 'resources/perfectgym_fitness_clubs.json'
 
     file = open(filepath)
     json_data = json.loads(file.read())
