@@ -11,6 +11,13 @@ from main.resources import credentials
 class Bot:
     """
     Represents basic Bot functionality, common for all fitness apps&pages bots.
+
+    Parameters
+    ----------
+    session : requests.sessions
+        User parametrised requests.session class.
+    config : read config file
+        parsed configuration.ini file.
     """
     _session = None
     _config = None
@@ -20,6 +27,7 @@ class Bot:
     def __init__(self, session, config):
         self._session = session
         self._config = config
+        # baseUrl assigned automatically based on configuration.
         self._baseUrl = config['BaseURL']
 
 
@@ -154,7 +162,7 @@ class EFitnessBot(Bot):
 
     def book_class(self, class_details):
         """
-        Books classes for user based on class details like start date/time, club and trainer.
+        Books classes in EFitness system for user based on class details like start date/time, club and trainer.
         User login is verified inside the method already.
         """
 
@@ -194,6 +202,7 @@ class EFitnessBot(Bot):
        Sends request to get classes available in whole week in EFitness system.
        Then parses information about classes available and returns ID of classes matching class details param
        """
+        print(self._baseUrl + 'kalendarz-zajec?room=&view=WeekCascading&day={}'.format(class_details.date))
         response = self._session.get(
             self._baseUrl + 'kalendarz-zajec?room=&view=WeekCascading&day={}'.format(class_details.date))
         soup = BeautifulSoup(response.text, 'html.parser')
