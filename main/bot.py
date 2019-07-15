@@ -1,6 +1,7 @@
 # Module responsible for sending the requests to the page #
 
 import logging
+from typing import List, Any
 
 from bs4 import BeautifulSoup
 
@@ -202,7 +203,6 @@ class EFitnessBot(Bot):
        Sends request to get classes available in whole week in EFitness system.
        Then parses information about classes available and returns ID of classes matching class details param
        """
-        print(self._baseUrl + 'kalendarz-zajec?room=&view=WeekCascading&day={}'.format(class_details.date))
         response = self._session.get(
             self._baseUrl + 'kalendarz-zajec?room=&view=WeekCascading&day={}'.format(class_details.date))
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -210,11 +210,12 @@ class EFitnessBot(Bot):
 
         # TODO: refactor those 2 loops
         # Go through classes and find ones with matching trainer and name
-        matching_classes_ids = list()
+        matching_classes_ids: List[Any] = list()
         for event in classes:
             children = event.findChildren()
-            if children[2].text == class_details.name \
-                    and children[3].text == class_details.trainer:
+            if children[3].text == class_details.name \
+                    and children[4].text == class_details.trainer:
+                print(matching_classes_ids)
                 matching_classes_ids.append(event.get('meta:id'))
 
         # check multiple matching classes to find exact one by date.
