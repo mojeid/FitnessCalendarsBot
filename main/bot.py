@@ -31,6 +31,9 @@ class Bot:
         # baseUrl assigned automatically based on configuration.
         self._baseUrl = config['BaseURL']
 
+    def book_classes(self, class_details):
+        pass
+
 
 class PerfectGymBot(Bot):
     """ Bot designed to work with PerfectGym system used by Platinium, CF Krakow and others"""
@@ -45,7 +48,7 @@ class PerfectGymBot(Bot):
         self._session.post(self._baseUrl + "Auth/Login", data=payload)
         return self
 
-    def book_class(self, class_details):
+    def book_classes(self, class_details):
         """
         Books classes for user based on class details like start date/time, club and trainer.
         User login is verified inside the method already.
@@ -161,10 +164,9 @@ class EFitnessBot(Bot):
         self._session.post(self._baseUrl + "Login/SystemLogin", data=payload)
         return self
 
-    def book_class(self, class_details):
+    def book_classes(self, class_details):
         """
         Books classes in EFitness system for user based on class details like start date/time, club and trainer.
-        User login is verified inside the method already.
         """
 
         # self._ensure_user_logged_in()
@@ -206,16 +208,15 @@ class EFitnessBot(Bot):
         response = self._session.get(
             self._baseUrl + 'kalendarz-zajec?room=&view=WeekCascading&day={}'.format(class_details.date))
         soup = BeautifulSoup(response.text, 'html.parser')
-        classes = soup.find_all(class_='event')
+        list_of_fitness_classes = soup.find_all(class_='event')
 
         # TODO: refactor those 2 loops
-        # Go through classes and find ones with matching trainer and name
+        # Go through all fitness classes and find ones with matching trainer and name
         matching_classes_ids: List[Any] = list()
-        for event in classes:
+        for event in list_of_fitness_classes:
             children = event.findChildren()
             if children[3].text == class_details.name \
                     and children[4].text == class_details.trainer:
-                print(matching_classes_ids)
                 matching_classes_ids.append(event.get('meta:id'))
 
         # check multiple matching classes to find exact one by date.
