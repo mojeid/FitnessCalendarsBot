@@ -1,13 +1,14 @@
 import configparser
 import unittest
+
 from main import bot, session_builder
 
 
-class BotRequestsTestCase(unittest.TestCase):
+class PerfectGymBotTestCase(unittest.TestCase):
     def setUp(self):
         config = configparser.ConfigParser()
         config.read('../main/resources/configuration.ini')
-        self.bot = bot.PerfectGymBot(session=session_builder.Session.build(), config=config['Crossfit'])
+        self.bot = bot.PerfectGymBot(session=session_builder.Session.build(), config=config['Centrumfitness'])
 
     def test_client_login(self):
         self.assertIsNotNone(self.bot.login(), "Client Login is not working correctly!")

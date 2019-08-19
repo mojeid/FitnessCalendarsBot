@@ -34,6 +34,22 @@ class Bot:
     def book_classes(self, class_details):
         pass
 
+    def _is_user_logged_in(self):
+        raise NotImplementedError()
+
+    def _ensure_user_logged_in(self):
+        """
+        Checks if user is logged into the PerfectGym system. If not, tries to log user in. In case of login failure
+        error message is shown.
+        """
+        if not self._is_user_logged_in():
+            self.login()
+            if not self._is_user_logged_in():
+                self._logger.warning(
+                    'Login was not successful 2 times in a row. Please check your account credentials.')
+
+
+
 
 class PerfectGymBot(Bot):
     """ Bot designed to work with PerfectGym system used by Platinium, CF Krakow and others"""
@@ -118,17 +134,6 @@ class PerfectGymBot(Bot):
         classes_response_data = r.json()
 
         return json_parser.PerfectGymParser.get_class_id_from_classes_list(classes_response_data, class_details)
-
-    def _ensure_user_logged_in(self):
-        """
-        Checks if user is logged into the PerfectGym system. If not, tries to log user in. In case of login failure
-        error message is shown.
-        """
-        if not self._is_user_logged_in():
-            self.login()
-            if not self._is_user_logged_in():
-                self._logger.warning(
-                    'Login was not successful 2 times in a row. Please check your account credentials.')
 
     def _is_user_logged_in(self):
         """
