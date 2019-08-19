@@ -4,6 +4,7 @@ import logging
 from typing import List, Any
 
 from bs4 import BeautifulSoup
+from requests import RequestException
 
 from main import json_parser
 from main.resources import credentials
@@ -45,8 +46,7 @@ class Bot:
         if not self._is_user_logged_in():
             self.login()
             if not self._is_user_logged_in():
-                self._logger.warning(
-                    'Login was not successful 2 times in a row. Please check your account credentials.')
+                raise RequestException("Could not login. Please check your credentials!")
 
 
 
@@ -119,7 +119,7 @@ class PerfectGymBot(Bot):
 
         response = self._session.get(self._baseUrl + 'MyCalendar/MyCalendar/GetCalendar')
         if not response.status_code == 200:
-            self._logger.warning("Could not access user's list of classes.")
+            raise AssertionError("Could not retrieve list of classes")
 
         return json_parser.PerfectGymParser.parse_booked_classes_from_users_calendar(response.json())
 
