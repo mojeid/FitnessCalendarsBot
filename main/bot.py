@@ -6,8 +6,7 @@ from typing import List, Any
 from bs4 import BeautifulSoup
 from requests import RequestException
 
-from main import json_parser
-from main.resources import credentials
+from main import json_parser, configmanager
 
 
 class Bot:
@@ -18,19 +17,20 @@ class Bot:
     ----------
     session : requests.sessions
         User parametrised requests.session class.
-    config : read config file
+        config : read config file
         parsed configuration.ini file.
     """
     _session = None
-    _config = None
     _baseUrl = None
+    _credentials = None
     _logger = logging.getLogger("Bot")
 
-    def __init__(self, session, config):
+    def __init__(self, session, config_name):
         self._session = session
-        self._config = config
         # baseUrl assigned automatically based on configuration.
-        self._baseUrl = config['BaseURL']
+        config_manager = configmanager.ConfigManager()
+        self._baseUrl = config_manager.read_base_url(config_name)
+        self._credentials = configmanager.CredentialsManager().read_credentials(config_name)
 
     def book_classes(self, class_details):
         pass
@@ -49,8 +49,6 @@ class Bot:
                 raise RequestException("Could not login. Please check your credentials!")
 
 
-
-
 class PerfectGymBot(Bot):
     """ Bot designed to work with PerfectGym system used by Platinium, CF Krakow and others"""
 
@@ -60,7 +58,7 @@ class PerfectGymBot(Bot):
 
         :rtype: PerfectGymBot
         """
-        payload = {'Login': credentials.username, 'Password': credentials.password}
+        payload = {'Login': self._credentials[0], 'Password': self._credentials[1]}
         self._session.post(self._baseUrl + "Auth/Login", data=payload)
         return self
 
@@ -165,7 +163,7 @@ class EFitnessBot(Bot):
         Performs login to the application using credentials from credentials.py file not stored in VCS
         :rtype: EFitnessBot
         """
-        payload = {'Login': credentials.username, 'Password': credentials.password}
+        payload = {'Login': self._credentials[0], 'Password': self._credentials[1]}
         self._session.post(self._baseUrl + "Login/SystemLogin", data=payload)
         return self
 

@@ -13,8 +13,9 @@ if __name__ == "__main__":
     class_details = FitnessClasses(None, 'TRX', '30-07-2019', '18:00', 'Łukasz Balicki', 'Infinity',
                                    None)
 
-    # perfectGymBot = bot.PerfectGymBot(session=session_builder.Session.build(), config=config['Platinium'])
+    perfectGymBot = bot.PerfectGymBot(session=session_builder.Session.build(), config_name='Platinium')
+    perfectGymBot.login()
     # perfectGymBot.book_class(class_details)
 
-    efitness_bot = bot.EFitnessBot(session_builder.Session.build(), config=config['Infinity'])
-    efitness_bot.login().book_classes(class_details)
+    # efitness_bot = bot.EFitnessBot(session_builder.Session.build(), config=config['Infinity'])
+    # efitness_bot.login().book_classes(class_details)
