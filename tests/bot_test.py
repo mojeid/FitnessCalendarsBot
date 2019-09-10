@@ -21,7 +21,7 @@ class PerfectGymBotTestCase(unittest.TestCase):
 
 class EFitnessBotTestCase(unittest.TestCase):
     def setUp(self):
-        self.bot = bot.EFitnessBot(session=session_builder.Session.build(), config_name='Platinium')
+        self.bot = bot.EFitnessBot(session=session_builder.Session.build(), config_name='Infinity')
 
     def test_client_login(self):
         self.bot.login()

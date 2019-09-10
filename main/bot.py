@@ -201,7 +201,7 @@ class EFitnessBot(Bot):
         :return: True when user is logged in and can access his profile. False otherwise.
         """
         response = self._session.get(self._baseUrl + 'MemberInfo/Index')
-        return 'wymaga autoryzacji' not in response.text
+        return 'class="daneprofilowe"' in response.text
 
     def _get_class_id(self, class_details):
         """
