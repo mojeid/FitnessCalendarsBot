@@ -14,13 +14,14 @@ class Bot:
     """
     Represents basic Bot functionality, common for all fitness apps&pages bots.
 
-    Parameters
+    Parameters:
     ----------
     session : requests.sessions
         User parametrised requests.session class.
-        config : read config file
-        parsed configuration.ini file.
+    config_name: str
+        Name of configuration that is present in config.ini file and should be loaded.
     """
+
     _session = None
     _baseUrl = None
     _credentials = None
@@ -34,6 +35,11 @@ class Bot:
         self._credentials = configmanager.CredentialsManager().read_credentials(config_name)
 
     def book_classes(self, class_details):
+        """
+        Try to book classes given by user. Exception will be thrown if classes could not be booked.
+        :param class_details: FitnessClasses
+        :return: self
+        """
         pass
 
     def _is_user_logged_in(self):
@@ -47,8 +53,8 @@ class Bot:
 
     def _ensure_user_logged_in(self):
         """
-        Checks if user is logged into the PerfectGym system. If not, tries to log user in. In case of login failure
-        error message is shown.
+        Checks if user is logged into the given fitness booking system. If not, tries to log user in.
+        In case of login failure error message is shown.
         """
         if not self._is_user_logged_in():
             self.login()
@@ -57,7 +63,7 @@ class Bot:
 
 
 class PerfectGymBot(Bot):
-    """ Bot designed to work with PerfectGym system used by Platinium, CF Krakow and others"""
+    """ Bot designed to work with PerfectGym system used by Fitness Platinium, CF Krakow and others"""
 
     def login(self):
         """
@@ -163,7 +169,10 @@ class PerfectGymBot(Bot):
 
 
 class EFitnessBot(Bot):
-    """ Bot designed to work with `EFitness system <http://http://efitness.pl/>`_ used by Grappling Krakow etc"""
+    """
+    Bot designed to work with `EFitness system <http://http://efitness.pl/>`_ used by Grappling Krakow,
+    Infinity Fitness Krakow etc
+    """
 
     def login(self):
         """
