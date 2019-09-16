@@ -29,5 +29,3 @@ class EFitnessBotTestCase(unittest.TestCase):
 
     # def test_get_booked_classes(self):
     #     self.assertTrue(isinstance(self.bot.get_booked_classes(), list))
-
-## TODO: zrobić osobne klasy testowe dla PerfectGym bota i dla EFitness bota. Oraz osobną wspolna testująca logowanie na wszystkich możliwych konfiguracjach, bez patrzenia jaki to jest bot?

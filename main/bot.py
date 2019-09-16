@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 from requests import RequestException
 
 from main import json_parser, configmanager
+from main.data_containers import FitnessClasses
 
 
 class Bot:
@@ -36,6 +37,12 @@ class Bot:
         pass
 
     def _is_user_logged_in(self):
+        raise NotImplementedError()
+
+    def _is_class_bookable(self, class_id):
+        raise NotImplementedError()
+
+    def get_booked_classes(self):
         raise NotImplementedError()
 
     def _ensure_user_logged_in(self):
@@ -176,14 +183,14 @@ class EFitnessBot(Bot):
         #
         class_id = self._get_class_id(class_details)
         print(class_id)
-        #
-        # if not class_id:
-        #     self._logger.warning('Wrong class information. Please check your classes details.')
-        #     return self
-        #
-        # # if not self._is_class_bookable(class_id):
-        # #     self._logger.warning('Classes are not bookable! Classes are either full or its too early too book them')
-        #
+
+        if not class_id:
+            self._logger.warning('Wrong class information. Please check your classes details.')
+            return self
+
+        if not self._is_class_bookable(class_id):
+            self._logger.warning('Classes are not bookable! Classes are either full or its too early too book them')
+
         # booking_payload = {'id': class_id, 'memberID': '3956236'}
         # response = self._session.post(self._baseUrl + 'Schedule/RegisterForClass', booking_payload)
         #
@@ -202,6 +209,24 @@ class EFitnessBot(Bot):
         """
         response = self._session.get(self._baseUrl + 'MemberInfo/Index')
         return 'class="daneprofilowe"' in response.text
+
+    def _is_class_bookable(self, class_id):
+        pass
+
+    def get_booked_classes(self):
+        response = self._session.get(self._baseUrl + 'kalendarz-zajec')
+        # TODO: load Beautifulsoup only once per class instance
+        soup = BeautifulSoup(response.text, 'html.parser')
+        parsed_response = soup.find_all(class_='button calendar_cancel_reservation')
+        booked_classes_list = []
+        for x in parsed_response:
+            # TODO rework to parse this data in private method, without magic numbers
+            date = x['title'][39:49]
+            start_time = x['title'][52:57]
+            name = x['title'][60:len(x['title']) - 1]
+            booked_classes_list.append(
+                FitnessClasses(x['meta:id'], name, date, start_time, None, None, None));
+        return booked_classes_list
 
     def _get_class_id(self, class_details):
         """
